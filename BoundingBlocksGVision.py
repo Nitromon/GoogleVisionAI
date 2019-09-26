@@ -54,8 +54,7 @@ def get_document_bounds(response, feature):
                     if (feature == FeatureType.WORD):
                         bounds.append(word.bounding_box)
     return bounds
-#change WORD/PARA
+#change WORD/PARA/SYMBOL/BLOCK
 bounds = get_document_bounds(response, FeatureType.WORD)
+#change color of boxes
 draw_boxes(image, bounds, 'white')
-
-print("fin")
